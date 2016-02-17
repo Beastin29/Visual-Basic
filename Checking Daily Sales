@@ -1,0 +1,89 @@
+    'Chapter 6:     Today's Sales Check
+    'Programmer:    Daniel Beas
+    'Date:          January 29 2016
+    'Purpose:       This form is the startup form for the Today's Sales check. The application
+    '               accepts input of daily sales information totaled by items. The application  
+    '               then calculates the total sales for the day, the total sales for the day for 
+    '               items on sale, and the total sales for items not on sale.
+
+    Private Sub btnEnterToday_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEnterToday.Click
+        'Display a dialog box for data entry of each item's sales
+        'totals for today. Display the dialog box until the user
+        'enters an empty description for the item.
+        Dim objAddItemForm As New frmAddItem
+
+        objAddItemForm.ShowDialog()
+        Do Until objAddItemForm.txtItemDescription.Text = ""
+            Dim lviTodaysSales As New ListViewItem(objAddItemForm.txtItemDescription.Text)
+            lviTodaysSales.SubItems.Add(Format$(objAddItemForm.nudTotalItemSales.Value, "Currency"))
+            If objAddItemForm.chkOnSale.Checked Then
+                lviTodaysSales.SubItems.Add("Yes")
+            Else
+                lviTodaysSales.SubItems.Add("No")
+            End If
+            lstTodaysSales.Items.Add(lviTodaysSales)
+            objAddItemForm.ShowDialog()
+        Loop
+    End Sub
+
+    Private Sub btnTotalTodaySales_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTotalTodaySales.Click
+        ' Read each item in the lstTodaysSales list box,determine
+        ' the amount in the second column, add the amount to the 
+        ' appropriate totals, and then display the totals.
+        Dim intIndex, intListCount As Integer
+        Dim sngTotalSales As Single = 0
+        Dim sngTotalOnSale As Single = 0
+        Dim sngTotalRegularPrice As Single = 0
+        Dim sngItemSales As Single
+        Dim strResults As String, strItemSales As String
+
+        intListCount = Convert.ToInt32(lstTodaysSales.Items.Count)
+        For intIndex = 0 To intListCount - 1
+            strItemSales = lstTodaysSales.Items(intIndex).SubItems(1).Text
+            strItemSales = strItemSales.Replace("$", "0")
+            sngItemSales = Convert.ToSingle(strItemSales)
+
+            sngTotalSales += sngItemSales
+            If lstTodaysSales.Items(intIndex).SubItems(2).Text = "Yes" Then
+                sngTotalOnSale += sngItemSales
+            Else
+                sngTotalRegularPrice += sngItemSales
+            End If
+        Next
+
+        strResults = "Total sales today: " & Format$(sngTotalSales, "Currency") & ControlChars.NewLine
+        strResults &= "Total sales for items on sale:" & Format$(sngTotalOnSale, "Currency") & ControlChars.NewLine
+        strResults &= "Total sales for items not on sale: " & Format$(sngTotalRegularPrice, "Currency")
+        MessageBox.Show(strResults, "Daily Sales Totals")
+    End Sub
+
+    Private Sub btnClear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClear.Click
+        lstTodaysSales.Items.Clear()
+    End Sub
+
+    
+    Private Sub lstTodaysSales_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles lstTodaysSales.KeyDown
+        If e.KeyCode = Keys.Delete And lstTodaysSales.SelectedIndices.Count > 0 Then
+            lstTodaysSales.Items.RemoveAt(lstTodaysSales.SelectedIndices(0))
+        End If
+
+
+    End Sub
+
+    Private Sub frmTodaysSalesCheck_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'When the form is resized, this event procedure makes
+        'sure that the first column in the list box still displays
+        'for the user
+        Dim intColumn0Width As Integer
+
+        intColumn0Width = Me.Width - lstTodaysSales.Columns(1).Width - lstTodaysSales.Columns(2).Width - 12
+        If intColumn0Width > 0 Then
+            lstTodaysSales.Columns(0).Width = intColumn0Width
+
+        End If
+    End Sub
+
+    Private Sub lstTodaysSales_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lstTodaysSales.SelectedIndexChanged
+
+    End Sub
+End Class
