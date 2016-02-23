@@ -1,0 +1,43 @@
+ Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnMakeChange.Click
+        Dim ShrHalfDollars, ShrQuarters, ShrDimes, ShrNickels, ShrPennies, ShrChange As Short
+        Dim StrResults As String
+        ShrChange = 100 - NudChangeAmount.Value
+
+        If ShrChange >= 50 Then
+            ShrHalfDollars += 1
+            ShrChange -= 50
+        End If
+        If ShrChange >= 25 Then
+            ShrQuarters += 1
+            ShrChange -= 25
+        End If
+        If ShrChange >= 10 Then
+            ShrDimes += 1
+            ShrChange -= 10
+        End If
+        If ShrChange >= 5 Then
+            ShrNickels += 1
+            ShrChange -= 5
+        End If
+        If ShrChange >= 1 Then
+            ShrPennies += 1
+            ShrChange -= 1
+        End If
+
+        'Outputs the results to a message box
+        StrResults = "Half Dollars: " & ShrHalfDollars & ControlChars.NewLine
+        StrResults &= "Quarters: " & ShrQuarters & ControlChars.NewLine
+        StrResults &= "Dimes " & ShrDimes & ControlChars.NewLine
+        StrResults &= "Nickels: " & ShrNickels & ControlChars.NewLine
+        StrResults &= "Pennies: " & ShrPennies & ControlChars.NewLine
+        MessageBox.Show(StrResults, "Change Amount")
+
+
+
+
+
+    End Sub
+    Private Sub BtnClear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnClear.Click
+        Me.Close()
+    End Sub
+End Class
