@@ -1,0 +1,960 @@
+Public Class Form1
+    Inherits System.Windows.Forms.Form
+
+#Region " Windows Form Designer generated code "
+
+    Public Sub New()
+        MyBase.New()
+
+        'This call is required by the Windows Form Designer.
+        InitializeComponent()
+
+        'Add any initialization after the InitializeComponent() call
+
+    End Sub
+
+    'Form overrides dispose to clean up the component list.
+    Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
+        If disposing Then
+            If Not (components Is Nothing) Then
+                components.Dispose()
+            End If
+        End If
+        MyBase.Dispose(disposing)
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents pic1 As System.Windows.Forms.PictureBox
+    Friend WithEvents pic2 As System.Windows.Forms.PictureBox
+    Friend WithEvents pic3 As System.Windows.Forms.PictureBox
+    Friend WithEvents pic4 As System.Windows.Forms.PictureBox
+    Friend WithEvents pic5 As System.Windows.Forms.PictureBox
+    Friend WithEvents pic6 As System.Windows.Forms.PictureBox
+    Friend WithEvents pic7 As System.Windows.Forms.PictureBox
+    Friend WithEvents pic12 As System.Windows.Forms.PictureBox
+    Friend WithEvents pic11 As System.Windows.Forms.PictureBox
+    Friend WithEvents pic10 As System.Windows.Forms.PictureBox
+    Friend WithEvents pic9 As System.Windows.Forms.PictureBox
+    Friend WithEvents pic8 As System.Windows.Forms.PictureBox
+    Friend WithEvents btnStart As System.Windows.Forms.Button
+    Friend WithEvents btnRestart As System.Windows.Forms.Button
+    Friend WithEvents lblScore2 As System.Windows.Forms.Label
+    Friend WithEvents lblScore1 As System.Windows.Forms.Label
+    <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
+        Me.pic1 = New System.Windows.Forms.PictureBox
+        Me.pic2 = New System.Windows.Forms.PictureBox
+        Me.pic3 = New System.Windows.Forms.PictureBox
+        Me.pic4 = New System.Windows.Forms.PictureBox
+        Me.pic5 = New System.Windows.Forms.PictureBox
+        Me.pic6 = New System.Windows.Forms.PictureBox
+        Me.pic7 = New System.Windows.Forms.PictureBox
+        Me.pic12 = New System.Windows.Forms.PictureBox
+        Me.pic11 = New System.Windows.Forms.PictureBox
+        Me.pic10 = New System.Windows.Forms.PictureBox
+        Me.pic9 = New System.Windows.Forms.PictureBox
+        Me.pic8 = New System.Windows.Forms.PictureBox
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.lblScore2 = New System.Windows.Forms.Label
+        Me.lblScore1 = New System.Windows.Forms.Label
+        Me.btnStart = New System.Windows.Forms.Button
+        Me.btnRestart = New System.Windows.Forms.Button
+        Me.SuspendLayout()
+        '
+        'pic1
+        '
+        Me.pic1.BackColor = System.Drawing.Color.DarkGreen
+        Me.pic1.Location = New System.Drawing.Point(16, 16)
+        Me.pic1.Name = "pic1"
+        Me.pic1.Size = New System.Drawing.Size(112, 120)
+        Me.pic1.TabIndex = 0
+        Me.pic1.TabStop = False
+        '
+        'pic2
+        '
+        Me.pic2.BackColor = System.Drawing.Color.DarkGreen
+        Me.pic2.Location = New System.Drawing.Point(144, 16)
+        Me.pic2.Name = "pic2"
+        Me.pic2.Size = New System.Drawing.Size(112, 120)
+        Me.pic2.TabIndex = 1
+        Me.pic2.TabStop = False
+        '
+        'pic3
+        '
+        Me.pic3.BackColor = System.Drawing.Color.DarkGreen
+        Me.pic3.Location = New System.Drawing.Point(272, 16)
+        Me.pic3.Name = "pic3"
+        Me.pic3.Size = New System.Drawing.Size(112, 120)
+        Me.pic3.TabIndex = 2
+        Me.pic3.TabStop = False
+        '
+        'pic4
+        '
+        Me.pic4.BackColor = System.Drawing.Color.DarkGreen
+        Me.pic4.Location = New System.Drawing.Point(400, 16)
+        Me.pic4.Name = "pic4"
+        Me.pic4.Size = New System.Drawing.Size(112, 120)
+        Me.pic4.TabIndex = 3
+        Me.pic4.TabStop = False
+        '
+        'pic5
+        '
+        Me.pic5.BackColor = System.Drawing.Color.DarkGreen
+        Me.pic5.Location = New System.Drawing.Point(528, 16)
+        Me.pic5.Name = "pic5"
+        Me.pic5.Size = New System.Drawing.Size(112, 120)
+        Me.pic5.TabIndex = 4
+        Me.pic5.TabStop = False
+        '
+        'pic6
+        '
+        Me.pic6.BackColor = System.Drawing.Color.DarkGreen
+        Me.pic6.Location = New System.Drawing.Point(656, 16)
+        Me.pic6.Name = "pic6"
+        Me.pic6.Size = New System.Drawing.Size(112, 120)
+        Me.pic6.TabIndex = 5
+        Me.pic6.TabStop = False
+        '
+        'pic7
+        '
+        Me.pic7.BackColor = System.Drawing.Color.DarkGreen
+        Me.pic7.Location = New System.Drawing.Point(16, 152)
+        Me.pic7.Name = "pic7"
+        Me.pic7.Size = New System.Drawing.Size(112, 120)
+        Me.pic7.TabIndex = 6
+        Me.pic7.TabStop = False
+        '
+        'pic12
+        '
+        Me.pic12.BackColor = System.Drawing.Color.DarkGreen
+        Me.pic12.Location = New System.Drawing.Point(656, 152)
+        Me.pic12.Name = "pic12"
+        Me.pic12.Size = New System.Drawing.Size(112, 120)
+        Me.pic12.TabIndex = 13
+        Me.pic12.TabStop = False
+        '
+        'pic11
+        '
+        Me.pic11.BackColor = System.Drawing.Color.DarkGreen
+        Me.pic11.Location = New System.Drawing.Point(528, 152)
+        Me.pic11.Name = "pic11"
+        Me.pic11.Size = New System.Drawing.Size(112, 120)
+        Me.pic11.TabIndex = 14
+        Me.pic11.TabStop = False
+        '
+        'pic10
+        '
+        Me.pic10.BackColor = System.Drawing.Color.DarkGreen
+        Me.pic10.Location = New System.Drawing.Point(400, 152)
+        Me.pic10.Name = "pic10"
+        Me.pic10.Size = New System.Drawing.Size(112, 120)
+        Me.pic10.TabIndex = 15
+        Me.pic10.TabStop = False
+        '
+        'pic9
+        '
+        Me.pic9.BackColor = System.Drawing.Color.DarkGreen
+        Me.pic9.Location = New System.Drawing.Point(272, 152)
+        Me.pic9.Name = "pic9"
+        Me.pic9.Size = New System.Drawing.Size(112, 120)
+        Me.pic9.TabIndex = 16
+        Me.pic9.TabStop = False
+        '
+        'pic8
+        '
+        Me.pic8.BackColor = System.Drawing.Color.DarkGreen
+        Me.pic8.Location = New System.Drawing.Point(144, 152)
+        Me.pic8.Name = "pic8"
+        Me.pic8.Size = New System.Drawing.Size(112, 120)
+        Me.pic8.TabIndex = 17
+        Me.pic8.TabStop = False
+        '
+        'Label1
+        '
+        Me.Label1.Location = New System.Drawing.Point(24, 304)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(104, 32)
+        Me.Label1.TabIndex = 24
+        Me.Label1.Text = "Player 1"
+        '
+        'Label3
+        '
+        Me.Label3.Location = New System.Drawing.Point(408, 304)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(104, 32)
+        Me.Label3.TabIndex = 26
+        Me.Label3.Text = "Player 2"
+        '
+        'lblScore2
+        '
+        Me.lblScore2.Location = New System.Drawing.Point(552, 304)
+        Me.lblScore2.Name = "lblScore2"
+        Me.lblScore2.Size = New System.Drawing.Size(144, 32)
+        Me.lblScore2.TabIndex = 27
+        Me.lblScore2.Text = "Score 2"
+        '
+        'lblScore1
+        '
+        Me.lblScore1.Location = New System.Drawing.Point(144, 304)
+        Me.lblScore1.Name = "lblScore1"
+        Me.lblScore1.Size = New System.Drawing.Size(144, 32)
+        Me.lblScore1.TabIndex = 28
+        Me.lblScore1.Text = "Score 1"
+        '
+        'btnStart
+        '
+        Me.btnStart.Location = New System.Drawing.Point(104, 384)
+        Me.btnStart.Name = "btnStart"
+        Me.btnStart.Size = New System.Drawing.Size(136, 48)
+        Me.btnStart.TabIndex = 29
+        Me.btnStart.Text = "Start"
+        '
+        'btnRestart
+        '
+        Me.btnRestart.Location = New System.Drawing.Point(440, 392)
+        Me.btnRestart.Name = "btnRestart"
+        Me.btnRestart.Size = New System.Drawing.Size(136, 48)
+        Me.btnRestart.TabIndex = 30
+        Me.btnRestart.Text = "Restart"
+        '
+        'Form1
+        '
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.ClientSize = New System.Drawing.Size(784, 474)
+        Me.Controls.Add(Me.btnRestart)
+        Me.Controls.Add(Me.btnStart)
+        Me.Controls.Add(Me.lblScore1)
+        Me.Controls.Add(Me.lblScore2)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.pic8)
+        Me.Controls.Add(Me.pic9)
+        Me.Controls.Add(Me.pic10)
+        Me.Controls.Add(Me.pic11)
+        Me.Controls.Add(Me.pic12)
+        Me.Controls.Add(Me.pic7)
+        Me.Controls.Add(Me.pic6)
+        Me.Controls.Add(Me.pic5)
+        Me.Controls.Add(Me.pic4)
+        Me.Controls.Add(Me.pic3)
+        Me.Controls.Add(Me.pic2)
+        Me.Controls.Add(Me.pic1)
+        Me.Name = "Form1"
+        Me.Text = "Memory Game"
+        Me.ResumeLayout(False)
+
+    End Sub
+
+#End Region
+
+    'Boolean variables are stored as 16-bit (2-byte) numbers, but they can only be true or false
+    Dim currentPair As Boolean
+
+    'Byte variables are stored as unsigned 8-bit (1-byte) numbers ranging in value from 0 through 255
+    Dim random, currentPlayer, firstPick, secondPick As Byte
+    Private Sub resetBoard()
+
+        lblScore1.Text = "0"
+        lblScore2.Text = "0"
+        random = 0
+        firstPick = 0
+        secondPick = 0
+        pic1.Image = Nothing
+        pic2.Image = Nothing
+        pic3.Image = Nothing
+        pic4.Image = Nothing
+        pic5.Image = Nothing
+        pic6.Image = Nothing
+        pic7.Image = Nothing
+        pic8.Image = Nothing
+        pic9.Image = Nothing
+        pic10.Image = Nothing
+        pic11.Image = Nothing
+        pic12.Image = Nothing
+        pic1.Enabled = True
+        pic2.Enabled = True
+        pic3.Enabled = True
+        pic4.Enabled = True
+        pic5.Enabled = True
+        pic6.Enabled = True
+        pic7.Enabled = True
+        pic8.Enabled = True
+        pic9.Enabled = True
+        pic10.Enabled = True
+        pic11.Enabled = True
+        pic12.Enabled = True
+    End Sub
+    Private Sub initialize()
+
+        lblScore1.Text = "0"
+        lblScore2.Text = "0"
+        currentPair = False
+        random = 0
+        currentPlayer = 0
+        firstPick = 0
+        secondPick = 0
+
+    End Sub
+    Private Function checkForMatch()
+        Dim one, two As Byte
+
+        If firstPick = 1 Or firstPick = 3 Then
+            one = 1
+        End If
+
+        If secondPick = 1 Or secondPick = 3 Then
+            two = 1
+        End If
+
+        If firstPick = 2 Or firstPick = 4 Then
+            one = 2
+        End If
+
+        If secondPick = 2 Or secondPick = 4 Then
+            two = 2
+        End If
+
+        If firstPick = 5 Or firstPick = 12 Then
+            one = 4
+        End If
+
+        If secondPick = 5 Or secondPick = 12 Then
+            two = 4
+        End If
+
+        If firstPick = 6 Or firstPick = 11 Then
+            one = 6
+        End If
+
+        If secondPick = 6 Or secondPick = 11 Then
+            two = 6
+        End If
+
+        If firstPick = 7 Or firstPick = 10 Then
+            one = 3
+        End If
+
+        If secondPick = 7 Or secondPick = 10 Then
+            two = 3
+        End If
+
+        If firstPick = 8 Or firstPick = 9 Then
+            one = 5
+        End If
+
+        If secondPick = 8 Or secondPick = 9 Then
+            two = 5
+        End If
+
+        If one = two Then
+            firstPick = 0
+            secondPick = 0
+            currentPair = False
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
+    Public Sub clearPictures()
+
+        Select Case firstPick
+            Case 1
+                pic1.Image = Nothing
+                pic1.Enabled = True
+            Case 2
+                pic2.Image = Nothing
+                pic2.Enabled = True
+            Case 3
+                pic3.Image = Nothing
+                pic3.Enabled = True
+            Case 4
+                pic4.Image = Nothing
+                pic4.Enabled = True
+            Case 5
+                pic5.Image = Nothing
+                pic5.Enabled = True
+            Case 6
+                pic6.Image = Nothing
+                pic6.Enabled = True
+            Case 7
+                pic7.Image = Nothing
+                pic7.Enabled = True
+            Case 8
+                pic8.Image = Nothing
+                pic8.Enabled = True
+            Case 9
+                pic9.Image = Nothing
+                pic9.Enabled = True
+            Case 10
+                pic10.Image = Nothing
+                pic10.Enabled = True
+            Case 11
+                pic11.Image = Nothing
+                pic11.Enabled = True
+            Case 12
+                pic12.Image = Nothing
+                pic12.Enabled = True
+
+        End Select
+
+        Select Case secondPick
+            Case 1
+                pic1.Image = Nothing
+                pic1.Enabled = True
+            Case 2
+                pic2.Image = Nothing
+                pic2.Enabled = True
+            Case 3
+                pic3.Image = Nothing
+                pic3.Enabled = True
+            Case 4
+                pic4.Image = Nothing
+                pic4.Enabled = True
+            Case 5
+                pic5.Image = Nothing
+                pic5.Enabled = True
+            Case 6
+                pic6.Image = Nothing
+                pic6.Enabled = True
+            Case 7
+                pic7.Image = Nothing
+                pic7.Enabled = True
+            Case 8
+                pic8.Image = Nothing
+                pic8.Enabled = True
+            Case 9
+                pic9.Image = Nothing
+                pic9.Enabled = True
+            Case 10
+                pic10.Image = Nothing
+                pic10.Enabled = True
+            Case 11
+                pic11.Image = Nothing
+                pic11.Enabled = True
+            Case 12
+                pic12.Image = Nothing
+                pic12.Enabled = True
+        End Select
+
+        firstPick = 0
+        secondPick = 0
+        currentPair = False
+
+    End Sub
+
+    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'On form load, declare all the variables values
+        initialize()
+
+    End Sub
+
+    Private Sub btnRestart_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRestart.Click
+        'Reset the game
+        resetBoard()
+
+    End Sub
+
+    Private Sub btnStart_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStart.Click
+        ' Initialize the random-number generator
+        Randomize()
+        ' Generate random value between 1 and 9
+        random = CInt(Int((9 * Rnd()) + 1))
+
+        If random < 4 Then
+            MsgBox("Player 1 Goes First")
+            currentPlayer = "1"
+        Else
+            MsgBox("Player 2 Goes First")
+            currentPlayer = "2"
+
+        End If
+    End Sub
+
+    Private Sub pic1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pic1.Click
+        pic1.Image = Image.FromFile("C:\Users\stu282906\Downloads\Black.png")
+
+        Select Case currentPlayer
+            Case 1
+                If currentPair = True Then
+                    secondPick = 1
+                    If checkForMatch() = True Then
+                        lblScore1.Text += 1
+                        pic1.Enabled = False
+                    Else
+                        currentPlayer = 2
+                        MsgBox("No Match, Player " & currentPlayer.ToString() & " 's turn")
+                        clearPictures()
+                    End If
+                Else
+                    pic1.Enabled = False
+                    currentPair = True
+                    firstPick = 1
+                End If
+            Case 2
+                If currentPair = True Then
+                    secondPick = 1
+                    If checkForMatch() = True Then
+                        lblScore2.Text += 1
+                        pic1.Enabled = False
+                    Else
+                        currentPlayer = 1
+                        MsgBox("No Match, Player " & currentPlayer.ToString() & " 's turn")
+                        clearPictures()
+                    End If
+                Else
+                    pic1.Enabled = False
+                    currentPair = True
+                    firstPick = 1
+                End If
+
+        End Select
+    End Sub
+
+    Private Sub pic2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pic2.Click
+        pic2.Image = Image.FromFile("C:\Users\stu282906\Downloads\Blue.png")
+
+        Select Case currentPlayer
+            Case 1
+                If currentPair = True Then
+                    secondPick = 2
+                    If checkForMatch() = True Then
+                        lblScore1.Text += 1
+                        pic2.Enabled = False
+                    Else
+                        currentPlayer = 2
+                        MsgBox("No Match, Player " & currentPlayer.ToString() & " 's turn")
+                        clearPictures()
+                    End If
+                Else
+                    pic2.Enabled = False
+                    currentPair = True
+                    firstPick = 2
+                End If
+            Case 2
+                If currentPair = True Then
+                    secondPick = 2
+                    If checkForMatch() = True Then
+                        lblScore2.Text += 1
+                        pic2.Enabled = False
+                    Else
+                        currentPlayer = 1
+                        MsgBox("No Match, Player " & currentPlayer.ToString() & " 's turn")
+                        clearPictures()
+                    End If
+                Else
+                    pic2.Enabled = False
+                    currentPair = True
+                    firstPick = 2
+                End If
+
+        End Select
+    End Sub
+
+    Private Sub pic3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pic3.Click
+        pic3.Image = Image.FromFile("C:\Users\stu282906\Downloads\Black.png")
+
+        Select Case currentPlayer
+            Case 1
+                If currentPair = True Then
+                    secondPick = 3
+                    If checkForMatch() = True Then
+                        lblScore1.Text += 1
+                        pic3.Enabled = False
+                    Else
+                        currentPlayer = 2
+                        MsgBox("No Match, Player " & currentPlayer.ToString() & " 's turn")
+                        clearPictures()
+                    End If
+                Else
+                    pic1.Enabled = False
+                    currentPair = True
+                    firstPick = 3
+                End If
+            Case 2
+                If currentPair = True Then
+                    secondPick = 3
+                    If checkForMatch() = True Then
+                        lblScore2.Text += 1
+                        pic3.Enabled = False
+                    Else
+                        currentPlayer = 1
+                        MsgBox("No Match, Player " & currentPlayer.ToString() & " 's turn")
+                        clearPictures()
+                    End If
+                Else
+                    pic3.Enabled = False
+                    currentPair = True
+                    firstPick = 3
+                End If
+
+        End Select
+    End Sub
+
+    Private Sub pic4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pic4.Click
+        pic4.Image = Image.FromFile("C:\Users\stu282906\Downloads\Blue.png")
+
+        Select Case currentPlayer
+            Case 1
+                If currentPair = True Then
+                    secondPick = 4
+                    If checkForMatch() = True Then
+                        lblScore1.Text += 1
+                        pic4.Enabled = False
+                    Else
+                        currentPlayer = 2
+                        MsgBox("No Match, Player " & currentPlayer.ToString() & " 's turn")
+                        clearPictures()
+                    End If
+                Else
+                    pic4.Enabled = False
+                    currentPair = True
+                    firstPick = 4
+                End If
+            Case 2
+                If currentPair = True Then
+                    secondPick = 4
+                    If checkForMatch() = True Then
+                        lblScore2.Text += 1
+                        pic4.Enabled = False
+                    Else
+                        currentPlayer = 1
+                        MsgBox("No Match, Player " & currentPlayer.ToString() & " 's turn")
+                        clearPictures()
+                    End If
+                Else
+                    pic4.Enabled = False
+                    currentPair = True
+                    firstPick = 4
+                End If
+
+        End Select
+    End Sub
+
+    Private Sub pic5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pic5.Click
+        pic5.Image = Image.FromFile("C:\Users\stu282906\Downloads\White.png")
+
+        Select Case currentPlayer
+            Case 1
+                If currentPair = True Then
+                    secondPick = 5
+                    If checkForMatch() = True Then
+                        lblScore1.Text += 1
+                        pic5.Enabled = False
+                    Else
+                        currentPlayer = 2
+                        MsgBox("No Match, Player " & currentPlayer.ToString() & " 's turn")
+                        clearPictures()
+                    End If
+                Else
+                    pic5.Enabled = False
+                    currentPair = True
+                    firstPick = 5
+                End If
+            Case 2
+                If currentPair = True Then
+                    secondPick = 5
+                    If checkForMatch() = True Then
+                        lblScore2.Text += 1
+                        pic5.Enabled = False
+                    Else
+                        currentPlayer = 1
+                        MsgBox("No Match, Player " & currentPlayer.ToString() & " 's turn")
+                        clearPictures()
+                    End If
+                Else
+                    pic5.Enabled = False
+                    currentPair = True
+                    firstPick = 5
+                End If
+
+        End Select
+    End Sub
+
+    Private Sub pic6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pic6.Click
+        pic6.Image = Image.FromFile("C:\Users\stu282906\Downloads\Yellow.png")
+
+        Select Case currentPlayer
+            Case 1
+                If currentPair = True Then
+                    secondPick = 6
+                    If checkForMatch() = True Then
+                        lblScore1.Text += 1
+                        pic6.Enabled = False
+                    Else
+                        currentPlayer = 2
+                        MsgBox("No Match, Player " & currentPlayer.ToString() & " 's turn")
+                        clearPictures()
+                    End If
+                Else
+                    pic6.Enabled = False
+                    currentPair = True
+                    firstPick = 1
+                End If
+            Case 2
+                If currentPair = True Then
+                    secondPick = 6
+                    If checkForMatch() = True Then
+                        lblScore2.Text += 1
+                        pic6.Enabled = False
+                    Else
+                        currentPlayer = 1
+                        MsgBox("No Match, Player " & currentPlayer.ToString() & " 's turn")
+                        clearPictures()
+                    End If
+                Else
+                    pic6.Enabled = False
+                    currentPair = True
+                    firstPick = 6
+                End If
+
+        End Select
+    End Sub
+
+    Private Sub pic7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pic7.Click
+        pic7.Image = Image.FromFile("C:\Users\stu282906\Downloads\Red.jpg")
+
+        Select Case currentPlayer
+            Case 1
+                If currentPair = True Then
+                    secondPick = 7
+                    If checkForMatch() = True Then
+                        lblScore1.Text += 1
+                        pic7.Enabled = False
+                    Else
+                        currentPlayer = 2
+                        MsgBox("No Match, Player " & currentPlayer.ToString() & " 's turn")
+                        clearPictures()
+                    End If
+                Else
+                    pic7.Enabled = False
+                    currentPair = True
+                    firstPick = 7
+                End If
+            Case 2
+                If currentPair = True Then
+                    secondPick = 7
+                    If checkForMatch() = True Then
+                        lblScore2.Text += 1
+                        pic7.Enabled = False
+                    Else
+                        currentPlayer = 1
+                        MsgBox("No Match, Player " & currentPlayer.ToString() & " 's turn")
+                        clearPictures()
+                    End If
+                Else
+                    pic7.Enabled = False
+                    currentPair = True
+                    firstPick = 7
+                End If
+
+        End Select
+    End Sub
+
+    Private Sub pic8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pic8.Click
+        pic8.Image = Image.FromFile("C:\Users\stu282906\Downloads\Brown.jpg")
+
+        Select Case currentPlayer
+            Case 1
+                If currentPair = True Then
+                    secondPick = 8
+                    If checkForMatch() = True Then
+                        lblScore1.Text += 1
+                        pic8.Enabled = False
+                    Else
+                        currentPlayer = 2
+                        MsgBox("No Match, Player " & currentPlayer.ToString() & " 's turn")
+                        clearPictures()
+                    End If
+                Else
+                    pic8.Enabled = False
+                    currentPair = True
+                    firstPick = 8
+                End If
+            Case 2
+                If currentPair = True Then
+                    secondPick = 8
+                    If checkForMatch() = True Then
+                        lblScore2.Text += 1
+                        pic8.Enabled = False
+                    Else
+                        currentPlayer = 1
+                        MsgBox("No Match, Player " & currentPlayer.ToString() & " 's turn")
+                        clearPictures()
+                    End If
+                Else
+                    pic8.Enabled = False
+                    currentPair = True
+                    firstPick = 8
+                End If
+
+        End Select
+    End Sub
+
+    Private Sub pic9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pic9.Click
+        pic9.Image = Image.FromFile("C:\Users\stu282906\Downloads\Brown.jpg")
+
+        Select Case currentPlayer
+            Case 1
+                If currentPair = True Then
+                    secondPick = 9
+                    If checkForMatch() = True Then
+                        lblScore1.Text += 1
+                        pic9.Enabled = False
+                    Else
+                        currentPlayer = 2
+                        MsgBox("No Match, Player " & currentPlayer.ToString() & " 's turn")
+                        clearPictures()
+                    End If
+                Else
+                    pic9.Enabled = False
+                    currentPair = True
+                    firstPick = 9
+                End If
+            Case 2
+                If currentPair = True Then
+                    secondPick = 9
+                    If checkForMatch() = True Then
+                        lblScore2.Text += 1
+                        pic9.Enabled = False
+                    Else
+                        currentPlayer = 1
+                        MsgBox("No Match, Player " & currentPlayer.ToString() & " 's turn")
+                        clearPictures()
+                    End If
+                Else
+                    pic9.Enabled = False
+                    currentPair = True
+                    firstPick = 9
+                End If
+
+        End Select
+    End Sub
+
+    Private Sub pic10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pic10.Click
+        pic10.Image = Image.FromFile("C:\Users\stu282906\Downloads\Red.jpg")
+
+        Select Case currentPlayer
+            Case 1
+                If currentPair = True Then
+                    secondPick = 10
+                    If checkForMatch() = True Then
+                        lblScore1.Text += 1
+                        pic10.Enabled = False
+                    Else
+                        currentPlayer = 2
+                        MsgBox("No Match, Player " & currentPlayer.ToString() & " 's turn")
+                        clearPictures()
+                    End If
+                Else
+                    pic10.Enabled = False
+                    currentPair = True
+                    firstPick = 10
+                End If
+            Case 2
+                If currentPair = True Then
+                    secondPick = 10
+                    If checkForMatch() = True Then
+                        lblScore2.Text += 1
+                        pic10.Enabled = False
+                    Else
+                        currentPlayer = 1
+                        MsgBox("No Match, Player " & currentPlayer.ToString() & " 's turn")
+                        clearPictures()
+                    End If
+                Else
+                    pic10.Enabled = False
+                    currentPair = True
+                    firstPick = 10
+                End If
+
+        End Select
+    End Sub
+
+    Private Sub pic11_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pic11.Click
+        pic11.Image = Image.FromFile("C:\Users\stu282906\Downloads\Yellow.png")
+
+        Select Case currentPlayer
+            Case 1
+                If currentPair = True Then
+                    secondPick = 11
+                    If checkForMatch() = True Then
+                        lblScore1.Text += 1
+                        pic11.Enabled = False
+                    Else
+                        currentPlayer = 2
+                        MsgBox("No Match, Player " & currentPlayer.ToString() & " 's turn")
+                        clearPictures()
+                    End If
+                Else
+                    pic11.Enabled = False
+                    currentPair = True
+                    firstPick = 11
+                End If
+            Case 2
+                If currentPair = True Then
+                    secondPick = 11
+                    If checkForMatch() = True Then
+                        lblScore2.Text += 1
+                        pic11.Enabled = False
+                    Else
+                        currentPlayer = 1
+                        MsgBox("No Match, Player " & currentPlayer.ToString() & " 's turn")
+                        clearPictures()
+                    End If
+                Else
+                    pic11.Enabled = False
+                    currentPair = True
+                    firstPick = 11
+                End If
+
+        End Select
+    End Sub
+
+    Private Sub pic12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pic12.Click
+        pic12.Image = Image.FromFile("C:\Users\stu282906\Downloads\White.png")
+
+        Select Case currentPlayer
+            Case 1
+                If currentPair = True Then
+                    secondPick = 12
+                    If checkForMatch() = True Then
+                        lblScore1.Text += 1
+                        pic12.Enabled = False
+                    Else
+                        currentPlayer = 2
+                        MsgBox("No Match, Player " & currentPlayer.ToString() & " 's turn")
+                        clearPictures()
+                    End If
+                Else
+                    pic12.Enabled = False
+                    currentPair = True
+                    firstPick = 12
+                End If
+            Case 2
+                If currentPair = True Then
+                    secondPick = 12
+                    If checkForMatch() = True Then
+                        lblScore2.Text += 1
+                        pic12.Enabled = False
+                    Else
+                        currentPlayer = 1
+                        MsgBox("No Match, Player " & currentPlayer.ToString() & " 's turn")
+                        clearPictures()
+                    End If
+                Else
+                    pic12.Enabled = False
+                    currentPair = True
+                    firstPick = 12
+                End If
+
+        End Select
+    End Sub
+End Class
